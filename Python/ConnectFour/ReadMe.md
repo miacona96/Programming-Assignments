@@ -18,27 +18,6 @@ Methods required for the Board class
 •	delMove(self,col): This method should do the "opposite" of addMove. That is, it should remove the top checker from the column col. If the column is empty, then delMove should do nothing. This function may not seem crucial right away, but it is very useful in the next problem in which you implement your own Connect Four AI... It's also useful if you implement "undo."
 •	winsFor(self, ox): This method should return True if the given checker, 'X' or 'O', held in ox, has won the calling Board. It should return False otherwise. Important Note: you need to check if the player has won horizontally, vertically, or diagonally (and there are two different directions for a diagonal win).
 •	hostGame( self ) This is a method that, when called from a connect four board object, will run a loop allowing the user(s) to play a game. See below for an example user interface.
-Here is our code for setBoard - please use this or something equivalent that works with your class:
-
-    def setBoard( self, moveString ):
-        """ takes in a string of columns and places
-            alternating checkers in those columns,
-            starting with 'X'
-            
-            For example, call b.setBoard('012345')
-            to see 'X's and 'O's alternate on the
-            bottom row, or b.setBoard('000000') to
-            see them alternate in the left column.
-
-            moveString must be a string of integers
-        """
-        nextCh = 'X'   # start by playing 'X'
-        for colString in moveString:
-            col = int(colString)
-            if 0 <= col <= self.width:
-                self.addMove(col, nextCh)
-            if nextCh == 'X': nextCh = 'O'
-            else: nextCh = 'X'
 
 Sample run: 
 
