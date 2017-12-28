@@ -7,27 +7,11 @@ In this problem, you will need to create a class named Board that implements som
 The Board class
 You will probably want to store the representation of the board as a two-dimensional list/array of characters. You should represent an empty slot by ' ', the space character. You should represent player X's checkers with an 'X' (the capital x character) and player O's checkers with an 'O' (the capital o character).
 Methods required for the Board class
+
 •	__init__(self, width=7, height=6): This is a constructor for Board objects that (in addition to self) takes two named arguments, one for the number of rows and one for the number of columns. It uses the default number of columns and rows (7 and 6, respectively) in the event that the user does not specify those arguments. Inside the constructor, you should set the values of the data members of the object, including initializing the two-dimensional array of characters to contain all ' 's (space characters). Note: It is tempting to initialize the board using the multiplication operator. For example, a 2 by 3 array of 0's could be constructed this way:
 [ [' '] * 3 ] * 2. Unfortunately, this looks nice but doesn't work because Python actually creates multiple copies of the same row this way. Thus, changing an element in one row will change the corresponding entries in all of the rows! Instead, use a strategy analogous to the way we constructed a blank board in the game of life.
 •	__str__(self): This method returns a string (it does not print a string) representing the Board object that calls it. Basically, each "checker" takes up one space, and all columns are separated by vertical bars (|). The columns are labeled at the bottom.
-Here is an example of how your board should look:
-     | | | | | | | |
-     | | | | | | | |
-     | | | | | | | |
-     | | | | | | | |
-     | | |O| |O| | |
-     | |X|X|X|O| | |
-     ---------------
-      0 1 2 3 4 5 6
-See the example run below for more examples of what a board should look like as a game is played. Remember that __str__ returns a string but doesn't actually print anything! The symbol \n can be placed in a string and causes a newline (return to beginning of next line). Here's an example:
 
->>> foo = "I\nlike\nspam"
->>> foo
-'I\nlike\nspam'
->>> print foo
-I
-like
-spam
 •	allowsMove(self, col): This method should return True if the calling Board object can allow a move into column c (because there is space available). It returns False if c does not have space available or if it is not a valid column. Thus, this method should check to be sure that c is within the range from 0 to the last column and make sure that there is still room left in the column!
 •	addMove(self, col, ox): This method should add an ox checker, where ox is a variable holding a string that is either "X" or "O", into column col. Note that the code will have to find the highest row number available in the column col and put the checker in that row. The highest row number available is the highest index with a space character ' ' in the column c. Notice that the highest row number corresponds to the lowest physical row on the board.
 •	setBoard(self, move_string): This method helps you (and us!) to test your Connect-Four Board class. Code is provided below, if you'd like to use it -- or adapt it to suit your representation of the game. But be sure to include a method that has this functionality in your class!
@@ -65,91 +49,35 @@ Sample run:
 Welcome to Connect Four!
 
 | | | | | | | |
+
+| | | | | | | |
+
 | | | | | | | |
 | | | | | | | |
+
 | | | | | | | |
+
 | | | | | | | |
-| | | | | | | |
+
 ---------------
+
  0 1 2 3 4 5 6
 
 X's choice:  3
 
 | | | | | | | |
+
 | | | | | | | |
+
 | | | | | | | |
+
 | | | | | | | |
+
 | | | | | | | |
+
 | | | |X| | | |
+
 ---------------
- 0 1 2 3 4 5 6
 
-O's choice:  4
-
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | |X|O| | |
----------------
- 0 1 2 3 4 5 6
-
-X's choice:  2
-
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | |X|X|O| | |
----------------
- 0 1 2 3 4 5 6
-
-O's choice:  4
-
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | |O| | |
-| | |X|X|O| | |
----------------
- 0 1 2 3 4 5 6
-
-X's choice:  1
-
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | |O| | |
-| |X|X|X|O| | |
----------------
- 0 1 2 3 4 5 6
-
-O's choice:  2
-
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | |O| |O| | |
-| |X|X|X|O| | |
----------------
- 0 1 2 3 4 5 6
-
-X's choice:  0
-
-
-X wins -- Congratulations!
-
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | |O| |O| | |
-|X|X|X|X|O| | |
----------------
  0 1 2 3 4 5 6
 
