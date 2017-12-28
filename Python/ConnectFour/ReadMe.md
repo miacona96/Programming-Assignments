@@ -40,9 +40,10 @@ Here is our code for setBoard - please use this or something equivalent that wor
             if nextCh == 'X': nextCh = 'O'
             else: nextCh = 'X'
 
-Sample run of hostGame
 Sample run: 
+
 >>> b = Board( 7, 6 )
+
 >>> b.hostGame()
 
 
