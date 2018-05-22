@@ -1,0 +1,11 @@
+{
+  "name": "cs-546-lab-3",
+  "version": "1.0.0",
+  "description": "CS546 Lab3",
+  "main": "app.js",
+  "scripts": {
+  	"start": "node app.js",
+  },
+  "author": "Michael Iacona 10407612",
+  "license": "ISC"
+}

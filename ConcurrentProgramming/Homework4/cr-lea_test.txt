@@ -1,0 +1,99 @@
+  0:	proc  - (:root:) creates proc  0 (:init:)
+0 :init ini Flag[4]        
+Starting Node with pid 1
+  2:	proc  0 (:init:) creates proc  1 (Node)
+0 :init ini run Node(d,e)  
+0 :init ini Flag[4] = 0    
+Process Statement          :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] 
+1 Node  7   values: 5!1    1          1          1          1          0          
+1 Node  7   channel_out!pi 1          1          1          1          0          
+Process Statement          :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     
+0 :init ini Flag[0]        1          1          1          1          0          channel[1] 
+Starting Node with pid 2
+  8:	proc  0 (:init:) creates proc  2 (Node)
+0 :init ini run Node(e,a)  1          1          1          1          0          channel[1] 
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     
+0 :init ini Flag[0] = 0    init:(0):d 1          1          1          1          0          channel[1] 
+0 :init ini Flag[1]        init:(0):d 0          1          1          1          0          channel[1] 
+2 Node  7   values: 1!2    init:(0):d 0          1          1          1          0          channel[1] 
+2 Node  7   channel_out!pi init:(0):d 0          1          1          1          0          channel[1] 
+Starting Node with pid 3
+ 14:	proc  0 (:init:) creates proc  3 (Node)
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(2     
+0 :init ini run Node(a,b)  init:(0):d 0          1          1          1          0          channel[1] channel[2] 
+0 :init ini Flag[1] = 0    init:(0):d 0          1          1          1          0          channel[1] channel[2] 
+3 Node  7   values: 2!3    init:(0):d 0          0          1          1          0          channel[1] channel[2] 
+3 Node  7   channel_out!pi init:(0):d 0          0          1          1          0          channel[1] channel[2] 
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(2     Node(3     
+2 Node  12  values: 5?1    init:(0):d 0          0          1          1          0          channel[1] channel[2] channel[3] 
+2 Node  11  channel_in?tok init:(0):d 0          0          1          1          0          channel[1] channel[2] channel[3] 
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(2     Node(2):to Node(3     
+2 Node  13  token<pid      init:(0):d 0          0          1          1          0          channel[1] channel_in 1          channel[3] 
+0 :init ini Flag[2]        init:(0):d 0          0          1          1          0          channel[1] channel_in 1          channel[3] 
+3 Node  12  values: 1?2    init:(0):d 0          0          1          1          0          channel[1] channel_in 1          channel[3] 
+3 Node  11  channel_in?tok init:(0):d 0          0          1          1          0          channel[1] channel_in 1          channel[3] 
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(2     Node(2):to Node(3     Node(3):to 
+3 Node  13  token<pid      init:(0):d 0          0          1          1          0          channel[1] channel_in 1          channel_in 2          
+2 Node  15  1              init:(0):d 0          0          1          1          0          channel[1] channel_in 1          channel_in 2          
+3 Node  15  1              init:(0):d 0          0          1          1          0          channel[1] channel_in 1          channel_in 2          
+Starting Node with pid 4
+ 26:	proc  0 (:init:) creates proc  4 (Node)
+0 :init ini run Node(b,c)  init:(0):d 0          0          1          1          0          channel[1] channel_in 1          channel_in 2          
+0 :init ini Flag[2] = 0    init:(0):d 0          0          1          1          0          channel[1] channel_in 1          channel_in 2          
+4 Node  7   values: 3!4    init:(0):d 0          0          0          1          0          channel[1] channel_in 1          channel_in 2          
+4 Node  7   channel_out!pi init:(0):d 0          0          0          1          0          channel[1] channel_in 1          channel_in 2          
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(2     Node(2):to Node(3     Node(3):to Node(4     
+0 :init ini Flag[3]        init:(0):d 0          0          0          1          0          channel[1] channel_in 1          channel_in 2          channel[4] 
+4 Node  12  values: 2?3    init:(0):e 0          0          0          1          0          channel[1] channel_in 1          channel_in 2          channel[4] 
+4 Node  11  channel_in?tok init:(0):e 0          0          0          1          0          channel[1] channel_in 1          channel_in 2          channel[4] 
+Starting Node with pid 5
+ 37:	proc  0 (:init:) creates proc  5 (Node)
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(2     Node(2):to Node(3     Node(3):to Node(4     Node(4):to 
+0 :init ini run Node(c,d)  init:(0):e 0          0          0          1          0          channel[1] channel_in 1          channel_in 2          channel_in 3          
+0 :init ini Flag[3] = 0    init:(0):e 0          0          0          1          0          channel[1] channel_in 1          channel_in 2          channel_in 3          
+5 Node  7   values: 4!5    init:(0):e 0          0          0          0          0          channel[1] channel_in 1          channel_in 2          channel_in 3          
+5 Node  7   channel_out!pi init:(0):e 0          0          0          0          0          channel[1] channel_in 1          channel_in 2          channel_in 3          
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(2     Node(2):to Node(3     Node(3):to Node(4     Node(4):to Node(5     
+5 Node  12  values: 3?4    init:(0):e 0          0          0          0          0          channel[1] channel_in 1          channel_in 2          channel_in 3          channel[5] 
+5 Node  11  channel_in?tok init:(0):e 0          0          0          0          0          channel[1] channel_in 1          channel_in 2          channel_in 3          channel[5] 
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(2     Node(2):to Node(3     Node(3):to Node(4     Node(4):to Node(5     Node(5):to 
+0 :init ini else           init:(0):e 0          0          0          0          0          channel[1] channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+4 Node  13  token<pid      init:(0):e 0          0          0          0          0          channel[1] channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+5 Node  13  token<pid      init:(0):e 0          0          0          0          0          channel[1] channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+1 Node  12  values: 4?5    init:(0):e 0          0          0          0          0          channel[1] channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+1 Node  11  channel_in?tok init:(0):e 0          0          0          0          0          channel[1] channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(1):to Node(2     Node(2):to Node(3     Node(3):to Node(4     Node(4):to Node(5     Node(5):to 
+5 Node  15  1              init:(0):e 0          0          0          0          0          channel_in 5          channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+1 Node  13  token>pid      init:(0):e 0          0          0          0          0          channel_in 5          channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+4 Node  15  1              init:(0):e 0          0          0          0          0          channel_ou 5          channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+1 Node  17  values: 5!5    init:(0):e 0          0          0          0          0          channel_ou 5          channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+1 Node  17  channel_out!to init:(0):e 0          0          0          0          0          channel_ou 5          channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+2 Node  12  values: 5?5    init:(0):e 0          0          0          0          0          channel[5] 5          channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+2 Node  11  channel_in?tok init:(0):e 0          0          0          0          0          channel[5] 5          channel_in 1          channel_in 2          channel_in 3          channel_in 4          
+2 Node  13  token>pid      init:(0):e 0          0          0          0          0          channel[5] 5          channel_in 5          channel_in 2          channel_in 3          channel_in 4          
+2 Node  17  values: 1!5    init:(0):e 0          0          0          0          0          channel[5] 5          channel_in 5          channel_in 2          channel_in 3          channel_in 4          
+2 Node  17  channel_out!to init:(0):e 0          0          0          0          0          channel[5] 5          channel_in 5          channel_in 2          channel_in 3          channel_in 4          
+3 Node  12  values: 1?5    init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel_in 2          channel_in 3          channel_in 4          
+3 Node  11  channel_in?tok init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel_in 2          channel_in 3          channel_in 4          
+3 Node  13  token>pid      init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel_in 5          channel_in 3          channel_in 4          
+3 Node  17  values: 2!5    init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel_in 5          channel_in 3          channel_in 4          
+3 Node  17  channel_out!to init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel_in 5          channel_in 3          channel_in 4          
+4 Node  12  values: 2?5    init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel[5] 5          channel_in 3          channel_in 4          
+4 Node  11  channel_in?tok init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel[5] 5          channel_in 3          channel_in 4          
+4 Node  13  token>pid      init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel[5] 5          channel_in 5          channel_in 4          
+4 Node  17  values: 3!5    init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel[5] 5          channel_in 5          channel_in 4          
+4 Node  17  channel_out!to init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel[5] 5          channel_in 5          channel_in 4          
+Process Statement          :init:(0   :init:([0] :init:([1] :init:([2] :init:([3] :init:([4] Node(1     Node(1):to Node(2     Node(2):to Node(3     Node(3):to Node(4     Node(4):to Node(5     Node(5):to 
+5 Node  12  values: 3?5    init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel[5] 5          channel[5] 5          channel_in 4          
+5 Node  11  channel_in?tok init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel[5] 5          channel[5] 5          channel_in 4          
+5 Node  13  token==pid     init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel[5] 5          channel[5] 5          channel_in 5          
+5 Node  20  nr_leaders = ( init:(0):e 0          0          0          0          0          channel[5] 5          channel[5] 5          channel[5] 5          channel[5] 5          channel_ou 5          
+ 76:	proc  5 (Node) terminates
+timeout
+#processes: 5
+ 76:	proc  4 (Node) cr-lea.pml:11 (state 12)
+ 76:	proc  3 (Node) cr-lea.pml:11 (state 12)
+ 76:	proc  2 (Node) cr-lea.pml:11 (state 12)
+ 76:	proc  1 (Node) cr-lea.pml:11 (state 12)
+ 76:	proc  0 (:init:) cr-lea.pml:51 (state 26)
+6 processes created

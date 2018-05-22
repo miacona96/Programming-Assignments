@@ -1,0 +1,10 @@
+RPG Gru
+Members:
+Andrew Wong: Navigation Panel, CSS Tutorial Page, Index JavaScript slides
+Erika Suttmeier: HTML layout
+Jacob Manzelmann: HTML layout, CSS About/Contact/Index
+Evan: Initial Idea, CSS About/Contact/Index
+Michael Iacona: Form + CSS
+Everyone worked on the various text elements for the site.
+"I pledge my honor that I have abided by the Stevens Honor System"
+

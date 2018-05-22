@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> A Simple User Login System </title>
+    </head>
+    <main>
+        <h1> Login </h1>
+        <form method='post' action='/login'>
+            
+            <label for='username'> Username: </label>
+            <input type='text' id='username' name='username' placeholder='Username'>
+
+            <label for='password'> Password: </label>
+            <input type='password' id='password' name='password' placeholder='Password'>
+            
+        <button type='submit'> Log in </button>
+        </form>
+        
+        {{#if error}}
+            <p>{{error}}</p>
+        {{/if}}
+
+    </main>
+</html>
